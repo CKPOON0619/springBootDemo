@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: "jdbc:postgresql://localhost:5432/${spring.application.name}"
+    username: "postgres"
+    password: "0Password1"
+
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    open-in-view: true
+
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings: true
+
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: "UTC"
+
+  application:
+    name: "demo1"
